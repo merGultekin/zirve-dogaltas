@@ -1,0 +1,174 @@
+﻿
+@{
+    //ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- CONTENT START -->
+<div class="page-content">
+
+    <!-- INNER PAGE BANNER -->
+    <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(images/inner_bizeulasin.jpg);">
+        <div class="overlay-main bg-black opacity-07"></div>
+        <div class="container">
+            <div class="wt-bnr-inr-entry">
+                <div class="banner-title-outer">
+                    <div class="banner-title-name">
+                        <h2 class="text-white">Bize Ulaşın</h2>
+                    </div>
+                </div>
+                <!-- BREADCRUMB ROW -->
+                <div>
+                    <ul class="wt-breadcrumb breadcrumb-style-2">
+                        <li><a href="@Url.Action("Index","Home")">Anasayfa</a></li>
+                        <li>Bize Ulaşın</li>
+                    </ul>
+                </div>
+
+                <!-- BREADCRUMB ROW END -->
+            </div>
+        </div>
+    </div>
+    <!-- INNER PAGE BANNER END -->
+
+
+    <!-- SECTION CONTENTG START -->
+    <div class="section-full small-device  p-tb80">
+
+        <div class="section-content m-b50">
+            <div class="container">
+
+                <!-- TITLE START -->
+                <div class="section-head text-center">
+                    <div class="wt-separator-outer separator-center">
+                        <div class="wt-separator">
+                            <span class="text-primary text-uppercase sep-line-one ">ZİRVE DOĞALTAŞ</span>
+                        </div>
+                    </div>
+                    <h2>İletişim Bilgilerimiz</h2>
+                </div>
+                <!-- TITLE END -->
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 m-b30">
+                        <div class="wt-icon-box-wraper center p-lr30 p-tb50 bdr-1 bdr-gray">
+                            <div class="icon-md m-b10"><i class="flaticon-smartphone"></i></div>
+                            <div class="icon-content">
+                                <h4>Telefon</h4>
+                                <h5 style="margin-top:-15px">
+                                    0262 658 94 46
+                                    <br />
+                                    0850 532 94 46
+                                </h5>
+                                <h4 style="margin-top:-15px">Faks</h4>
+                                <h5 style="margin-top:-15px">0262 658 94 46</h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 col-sm-12 m-b30">
+                        <div class="wt-icon-box-wraper center p-lr30 p-tb50  block-shadow">
+                            <div class="icon-md  m-b10"><i class="flaticon-email"></i></div>
+                            <div class="icon-content">
+                                <h4>E-Posta</h4>
+                                <h5>info@zirve-dogaltas.com</h5>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 m-b30">
+                        <div class="wt-icon-box-wraper center p-lr30 p-tb50">
+                            <div class="icon-md	 m-b10"><i class="flaticon-placeholder"></i></div>
+                            <div class="icon-content">
+                                <h4>Adres</h4>
+                                <h5>Şekerpınar Mah. Fevzi Çakmak Cad. Kamer Sok. No:7 <br>Çayırova/Kocaeli</h5>
+                                @*<p><a href="https://goo.gl/maps/6zcy8P8aQMTQKbjy7" target="_blank">Yol Tarifi Almak İçin Tıklayınız </a></p>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOCATION BLOCK-->
+
+        <div class="container">
+            <h4 style="text-align:center"><a href="https://goo.gl/maps/6zcy8P8aQMTQKbjy7" target="_blank">Navigasyon için tıklayınız</a></h4>
+            <div class="gmap-outline m-b80">
+                <!-- <div id="gmap_canvas2" class="google-map"></div> -->
+                <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6035.893545873614!2d29.3942510762684!3d40.851092399999985!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6308896212bfbcd6!2zNDDCsDUxJzAzLjEiTiAyOcKwMjMnNDkuMSJF!5e0!3m2!1sen!2str!4v1642194135725!5m2!1sen!2str" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- GOOGLE MAP & CONTACT FORM -->
+        @*<div class="section-content overlay-wraper ">
+            <div class="container">
+                <!-- TITLE START -->
+                <div class="section-head text-center">
+                    <div class="wt-separator-outer separator-center">
+                        <div class="wt-separator">
+                            <span class="text-primary text-uppercase sep-line-one ">Contact Form</span>
+                        </div>
+                    </div>
+                    <h2>Get In Touch</h2>
+                </div>
+                <!-- TITLE END -->
+                <form class="contact-form cons-contact-form" method="post" action="form-handler.php">
+                    <div class="contact-one">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input name="username" type="text" required class="form-control" placeholder="Name">
+                                    <span class="spin"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input name="email" type="text" class="form-control" required placeholder="Email">
+                                    <span class="spin"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea name="message" rows="4" class="form-control " required placeholder="Message"></textarea>
+                                    <span class="spin"></span>
+                                </div>
+                            </div>
+                            <div class="text-left col-md-12">
+                                <button name="submit" type="submit" value="Submit" class="site-button site-btn-effect">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>*@
+
+        <!-- SECTION CONTENT END -->
+
+    </div>
+    <!-- CONTENT END -->
+
+
+
+    @section HomeContactUsUp{
+        <!-- CUSTOM -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#menuContactUs").addClass('active');
+            });
+        </script>
+        <!-- CUSTOM SON -->
+    }
+
+
+    @section HomeContactUsDown{
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrZUTwTPQU4bXLuhbR8tPhuKtf17xWuc8 &callback=initMap"></script><!-- GOOGLE MAP -->
+    <script src="/js/map.script.js"></script><!-- MAP FUCTIONS [ this file use with google map]  -->
+
+
+    }

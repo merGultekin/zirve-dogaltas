@@ -1,0 +1,38 @@
+﻿<div class="footer-widget gallery-widget">
+    <h2>Koleksiyon</h2>
+    <div class="clearfix">
+
+        @{
+            List<int> randomList = new List<int>(new int[] { 1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16 });
+
+            Random r = new Random();
+            IEnumerable<int> imageCollection = randomList.OrderBy(x => r.Next()).Take(12);
+        }
+
+        @foreach (var item in imageCollection)
+        {
+            <figure class="image">
+                <a href="@String.Format("/images/resource/anasayfa_footer_{0}.jpg", item)" class="lightbox-image" title="Granit, mermer, çimstone">
+                    <img src="@String.Format("/images/resource/anasayfa_footer_{0}.jpg", item)" alt="granit, mermer, çimstone">
+                </a>
+            </figure>
+        }
+
+
+
+        @*<figure class="image">
+                <a href="~/images/resource/anasayfa_footer_1.jpg" class="lightbox-image" title="Granit, mermer, çimstone">
+                    <img src="~/images/resource/anasayfa_footer_1.jpg" alt="Granit, mermer, çimstone">
+                </a>
+            </figure>
+            <figure class="image"><a href="~/images/resource/anasayfa_footer_2.jpg" class="lightbox-image" title="Granit, mermer, çimstone"><img src="~/images/resource/anasayfa_footer_2.jpg" alt="Granit, mermer, çimstone"></a></figure>
+            <figure class="image"><a href="~/images/resource/anasayfa_footer_3.jpg" class="lightbox-image" title="Granit, mermer, çimstone"><img src="~/images/resource/anasayfa_footer_3.jpg" alt="Granit, mermer, çimstone"></a></figure>
+            <figure class="image"><a href="~/images/resource/anasayfa_footer_4.jpg" class="lightbox-image" title="Granit, mermer, çimstone"><img src="~/images/resource/anasayfa_footer_4.jpg" alt="Granit, mermer, çimstone"></a></figure>
+            <figure class="image"><a href="~/images/resource/anasayfa_footer_5.jpg" class="lightbox-image" title="Granit, mermer, çimstone"><img src="~/images/resource/anasayfa_footer_5.jpg" alt="Granit, mermer, çimstone"></a></figure>
+            <figure class="image"><a href="~/images/resource/anasayfa_footer_6.jpg" class="lightbox-image" title="Granit, mermer, çimstone"><img src="~/images/resource/anasayfa_footer_6.jpg" alt="Granit, mermer, çimstone"></a></figure>
+            <figure class="image"><a href="~/images/resource/anasayfa_footer_4.jpg" class="lightbox-image" title="Granit, mermer, çimstone"><img src="~/images/resource/anasayfa_footer_7.jpg" alt="Granit, mermer, çimstone"></a></figure>
+            <figure class="image"><a href="~/images/resource/anasayfa_footer_5.jpg" class="lightbox-image" title="Granit, mermer, çimstone"><img src="~/images/resource/anasayfa_footer_8.jpg" alt="Granit, mermer, çimstone"></a></figure>
+            <figure class="image"><a href="~/images/resource/anasayfa_footer_6.jpg" class="lightbox-image" title="Granit, mermer, çimstone"><img src="~/images/resource/anasayfa_footer_9.jpg" alt="Granit, mermer, çimstone"></a></figure>*@
+    </div>
+</div>
+

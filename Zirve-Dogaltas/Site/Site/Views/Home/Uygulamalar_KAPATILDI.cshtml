@@ -1,0 +1,201 @@
+﻿
+@{
+    //ViewBag.Title = "Kurumsal";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- CONTENT START -->
+<div class="page-content">
+
+    <!-- INNER PAGE BANNER -->
+    <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(/images/inner_referanslar.jpg);">
+        <div class="overlay-main bg-black opacity-07"></div>
+        <div class="container">
+            <div class="wt-bnr-inr-entry">
+                <div class="banner-title-outer">
+                    <div class="banner-title-name">
+                        <h2 class="text-white">Uygulamalar</h2>
+                    </div>
+                </div>
+                <!-- BREADCRUMB ROW -->
+
+                <div>
+                    <ul class="wt-breadcrumb breadcrumb-style-2">
+                        <li><a href="@Url.Action("Index","Home")">Anasayfa</a></li>
+                        <li>Uygulamalar</li>
+                    </ul>
+                </div>
+
+                <!-- BREADCRUMB ROW END -->
+            </div>
+        </div>
+    </div>
+    <!-- INNER PAGE BANNER END -->
+    <!-- WELCOME SECTION START -->
+    <div class="section-full p-tb80 bg-white">
+
+        <div class="container">
+            <div class="section-content">
+               
+
+
+                <div class="row">
+
+
+
+
+                    <div class="col-md-12 col-sm-12">
+                        <!-- TITLE START -->
+                        <div class="section-head">
+                            <div class="wt-separator-outer separator-left">
+                                <div class="wt-separator">
+                                    <span class="text-primary text-uppercase sep-line-one ">ZİRVE DOĞALTAŞ</span>
+                                </div>
+                            </div>
+                            <h2>UYGULAMALAR</h2>
+                        </div>
+                        <!-- TITLE END -->
+                        <!-- GALLERY CONTENT START -->
+
+
+
+
+                        <div class="portfolio-wrap mfp-gallery work-grid clearfix">
+
+                            <!-- Start Instagram Feed -->
+
+                            <div class="col-md-12" id="instagram-feed"></div>
+
+
+                        </div>
+
+                        <!-- GALLERY CONTENT END -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- WELCOME  SECTION END -->
+
+</div>
+<!-- CONTENT END -->
+
+
+
+
+@section HomeApplicationsUp{
+
+
+
+
+}
+
+@section HomeApplicationsDown{
+
+
+     <!-- CUSTOM -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#menuApplications").addClass('active');
+            });
+        </script>
+    <!-- CUSTOM SON -->
+
+
+    <!-- 
+        https://github.com/stevenschobert/instafeed.js/wiki/Facebook-app-and-test-user-setup
+
+https://www.instant-tokens.com/instagram/authorisations
+
+        https://www.instant-tokens.com/
+        
+        Detaylar Bilgiler.docx de
+
+
+        -->
+
+@*<script src="~/instaFeed/instafeed.min.js"></script>*@
+
+<!-- CUSTOM Instafeed -->
+<script src="/instaFeed/instafeed.min.js"></script>
+
+<script type="text/javascript">
+
+    function instaFeed() {
+        var galleryFeed = new Instafeed({
+            get: "user",
+            userId: 17841404228058206, //4145652935,
+            //accessToken: "4145652935.cbe7a74.b98c4d79f2914cc888845e9fe734c39c",
+            //accessToken: "IGQVJVZAWdGVGVKcFhfRllJem9kaHpaOVhxdXpJd3N6TXFtazVLcmJPejFCR2ttNXBEYXhUbjVzRl8yQkVyY0s5R3M0X1V2MUE0LURyTlJlWHhOeDRRanNyQ3gxU2NueHh4R3d0cFN3",
+            //accessToken: "IGQVJXUFhkdHFwLXhXWnVaV2UwU0V6S3FqWThGejMxSHNZAOTUtUmlQay1LYTFlZAEp5di02OG9IdndxdXlIclAxT19XOGJmS3ZA6Nm1MM01SRHdOdVFRWTc0YzZAQNEFiYXFLZAmRmM0tR",
+            accessToken: "IGQVJWUHdyaUstSkJwV3NZAMi00SEVKNGt3RGZAnbWc0OERVV2kzTU8ycnhrU2FpdFlVWXRFcGpnNjlVRG1jWEI0NEFLODlpclV5VEJQWk5nNDkxazZAfM2JOcTJnX2RPamlqb0NaUjZA3",
+            resolution: "standard_resolution",
+            useHttp: "true",
+            limit: 60, // Control Instagram feed number. Max limit is 60.
+            template: '<div class="masonry-item  cat-2 col-md-3 col-sm-6 m-b30">' +
+                '<div class="wt-box   work-hover-content">' +
+                '<div class="wt-thum-bx img-center-icon">' +
+                '<a href="{{link}}" target="_blank"><img src="{{image}}" class="w-100 {{orientation}}"></a>' +
+                '</div>' +
+                '<div class="wt-info  p-t20">' +
+                '<h4 class="wt-tilte m-b10 m-t0"><a href="#">{{caption}}</a></h4>' +
+                '<p class="m-b0">{{caption}}</p>' +
+                '</div>' +
+                '</div>' +
+                '</div>',
+
+            target: "instagram-feed",
+            after: function () {
+                var owl = $(".owl-carousel"),
+                    owlSlideSpeed = 300;
+                $(document).ready(function () {
+                    owl.owlCarousel({
+                        navText: [
+                    '<i class="fa fa-angle-left"></i>',
+                    '<i class="fa fa-angle-right"></i>'
+                        ],
+                        dots: false,
+                        margin: 0,
+                        loop: true,
+                        margin: 10,
+                        nav: true,
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            481: {
+                                items: 2
+                            },
+                            721: {
+                                items: 3
+                            },
+                            992: {
+                                items: 4
+                            },
+                            1200: {
+                                items: 5
+                            },
+                        }
+                    });
+                });
+            }
+        });
+
+        galleryFeed.run();
+    }
+
+
+    // Dom Ready Function
+    jQuery(document).on('ready', function () {
+        (function ($) {
+            instaFeed();
+        })(jQuery);
+    });
+
+</script>
+
+
+
+}

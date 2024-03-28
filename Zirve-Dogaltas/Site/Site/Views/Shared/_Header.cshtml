@@ -1,0 +1,59 @@
+﻿<header class="site-header header-style-1  nav-wide">
+    <div class="sticky-header main-bar-wraper">
+        <div class="main-bar bg-white">
+            <div class="container header-center">
+                <div class="wt-header-left">
+                    <div class="logo-header">
+                        <div class="logo-header-inner logo-header-one">
+                            <a href="@Url.Action("Index","Home")">
+                                <img src="/images/logo-dark.png"  /> <!-- width="171" height="49" alt="" -->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="wt-header-center">
+                    <!-- NAV Toggle Button -->
+                    <button data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- MAIN Vav -->
+                    <div class="header-nav navbar-collapse collapse nav-dark">
+                        <ul class=" nav navbar-nav nav-line-animation">
+                            <li id="menuHome"><a href="@Url.Action("Index","Home")">ANASAYFA</a></li>
+
+                            <li id="menuCorporate"><a href="@Url.Action("Kurumsal","Home")">KURUMSAL</a></li>
+
+                            <li id="menuCollection">
+                                <a href="javascript:;">KOLEKSİYON</a>
+                                <ul class="sub-menu">
+                                    <li><a href="@Url.Action("Granit","Home")">Granit</a></li>
+                                    <li><a href="@Url.Action("Mermer","Home")">Mermer</a></li>
+                                    <li><a href="@Url.Action("Onyx","Home")">Onyx</a></li>
+                                    <li><a href="@Url.Action("Cimstone","Home")">Çimstone</a></li>
+                                    <li><a href="@Url.Action("Belenco","Home")">Belenco</a></li>
+                                    <li><a href="@Url.Action("Dekton", "Home")">Dekton</a></li>
+                                    <li><a href="@Url.Action("Infinity", "Home")">Infinity</a></li>
+                                    <li><a href="@Url.Action("Silestone", "Home")">Silestone</a></li>
+                                    <li><a href="@Url.Action("Neolith", "Home")">Neolith</a></li>
+                                </ul>
+                            </li>                            
+    
+                            @*<li id="menuApplications"><a href="@Url.Action("Uygulamalar","Home")">UYGULAMALAR</a></li>*@
+
+                            <li id="menuGranitMermerYakma"><a href="/granit-mermer-yakma">GRANİT MERMER YAKMA</a></li>
+
+                            <li id="menuPatinato"><a href="/patinato">PATİNATO</a></li>
+
+                            <li id="menuReferences"><a href="@Url.Action("Referanslar","Home")">REFERANSLAR</a></li>
+
+                            <li id="menuContactUs"><a href="@Url.Action("BizeUlasin","Home")">BİZE ULAŞIN</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

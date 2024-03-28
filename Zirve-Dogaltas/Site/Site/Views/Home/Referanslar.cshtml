@@ -1,0 +1,139 @@
+﻿
+@{
+    //ViewBag.Title = "Kurumsal";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- CONTENT START -->
+<div class="page-content">
+
+    <!-- INNER PAGE BANNER -->
+    <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(/images/inner_referanslar.jpg);">
+        <div class="overlay-main bg-black opacity-07"></div>
+        <div class="container">
+            <div class="wt-bnr-inr-entry">
+                <div class="banner-title-outer">
+                    <div class="banner-title-name">
+                        <h2 class="text-white">Referanslar</h2>
+                    </div>
+                </div>
+                <!-- BREADCRUMB ROW -->
+
+                <div>
+                    <ul class="wt-breadcrumb breadcrumb-style-2">
+                        <li><a href="@Url.Action("Index","Home")">Anasayfa</a></li>
+                        <li>Referanslar</li>
+                    </ul>
+                </div>
+
+                <!-- BREADCRUMB ROW END -->
+            </div>
+        </div>
+    </div>
+    <!-- INNER PAGE BANNER END -->
+    <!-- WELCOME SECTION START -->
+    <div class="section-full p-tb80 bg-white">
+
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                        <!-- TITLE START -->
+                        <div class="section-head">
+                            <div class="wt-separator-outer separator-left">
+                                <div class="wt-separator">
+                                    <span class="text-primary text-uppercase sep-line-one ">ZİRVE DOĞALTAŞ</span>
+                                </div>
+                            </div>
+                            <h2>REFERANSLAR</h2>
+                        </div>
+                        <!-- TITLE END -->
+                        <p>
+                            
+                            20 yıllık tecrübesiyle sektörün en güçlü firmalarından olan Zirve Doğaltaş, güven ve kalitenin adresi olarak, birbirinden güzel projelere imza
+                            atmış bir şirkettir.Sektörün en eski ve köklü firmalarından olan firmamız. Profesyonel çalışan kadromuzla kaliteyi estetikle buluşturarak
+                            mekanlarınıza şıklık katma arzusundadır.
+                            <br />
+                            <br />
+                            Ürün portföyümüzde Çimstone, Granit, Belenco, silenstone, Mermer çeşitleri bulunmaktadır. Bu ürünleri Mutfak tezgahları,
+                            Banyo tezgahları, Zemin döşemeleri, Duvar Kaplamaları ve çeşitli mimarı uygulamalarda kullanmak üzere 1200m kapalı
+                            alan ve son teknoloji üretim makine ve ekipmanlarıyla donatılmış fabrikamızda profesyonel kadromuzla hizmetinizdeyiz.
+                            <br />
+                            <br />
+                            Firmamızın çalışma politikası müşteri memnuniyeti üzerine kuruludur. Hassas ölçülendirme profesyonel montaj ve
+                            zamanında teslimat güvencemiz altındadır.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="row m-t50">
+
+                    <div class="col-md-12 col-sm-12">
+                        <!-- TITLE START -->
+                        <div class="section-head">
+                            <div class="wt-separator-outer separator-left">
+                                <div class="wt-separator">
+                                    <span class="text-primary text-uppercase sep-line-one ">ZİRVE DOĞALTAŞ</span>
+                                </div>
+                            </div>
+                            <h2>REFERANSLAR</h2>
+                        </div>
+                        <!-- TITLE END -->
+                        <!-- GALLERY CONTENT START -->
+                        <div class="row clearfix">
+
+                            <!-- COLUMNS 1 -->
+                          
+                           @foreach (var item in Model.ProductList)   
+                            {
+                                <div class="col-md-4 col-sm-6 m-b30">
+                                    <a data-fancybox="gallery" href="@item.ImageFileUrl">
+                                        <img src="@item.ImageFileUrl">
+                                    </a>
+                                    <div class="work-hover-discription" style="text-align:center">
+                                        <h4>@item.Title</h4>
+                                        @*<h5>North House</h5>*@
+                                    </div>
+                                        @*<a href="#"></a>*@
+                                </div>
+                            }
+
+                        </div>
+                        <!-- GALLERY CONTENT END -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- WELCOME  SECTION END -->
+
+</div>
+<!-- CONTENT END -->
+
+
+
+
+@section HomeCorporateUp{
+
+<link href="~/fancyBox/jquery.fancybox.min.css" rel="stylesheet" />
+
+<script src="~/fancyBox/jquery-3.3.1.min.js"></script>
+<script src="~/fancyBox/jquery.fancybox.min.js"></script>
+}
+
+@section HomeCorporateDown{
+
+
+     <!-- CUSTOM -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#menuCorporate").addClass('active');
+            });
+        </script>
+    <!-- CUSTOM SON -->
+
+}

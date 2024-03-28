@@ -1,0 +1,303 @@
+﻿@model Site.Models.ContentVM
+
+@{
+    //ViewBag.Title = "Kurumsal";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- CONTENT START -->
+<div class="page-content">
+
+    <!-- INNER PAGE BANNER -->
+    <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(/images/inner_kurumsal.jpg);">
+        <div class="overlay-main bg-black opacity-07"></div>
+        <div class="container">
+            <div class="wt-bnr-inr-entry">
+                <div class="banner-title-outer">
+                    <div class="banner-title-name">
+                        <h2 class="text-white">Kurumsal</h2>
+                    </div>
+                </div>
+                <!-- BREADCRUMB ROW -->
+
+                <div>
+                    <ul class="wt-breadcrumb breadcrumb-style-2">
+                        <li><a href="@Url.Action("Index","Home")">Anasayfa</a></li>
+                        <li>Kurumsal</li>
+                    </ul>
+                </div>
+
+                <!-- BREADCRUMB ROW END -->
+            </div>
+        </div>
+    </div>
+    <!-- INNER PAGE BANNER END -->
+    <!-- WELCOME SECTION START -->
+    <div class="section-full p-tb80 bg-white">
+
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+                 
+                    <div class="col-md-12 col-sm-12">
+                        <!-- TITLE START -->
+                        <div class="section-head">
+                            <div class="wt-separator-outer separator-left">
+                                <div class="wt-separator">
+                                    <span class="text-primary text-uppercase sep-line-one ">ZİRVE DOĞALTAŞ</span>
+                                </div>
+                            </div>
+                            <h2>KURUMSAL</h2>
+                        </div>
+                        <!-- TITLE END -->
+                        <p>
+                            <img style="float:right; padding:5px; margin:0 0 5px 15px; border:1px solid #e9e9e9; height:354px !important" class="img-responsive" src="/images/showcase_kurumsal.jpg" alt="">
+
+                            20 yıllık tecrübesiyle sektörün en güçlü firmalarından olan Zirve Doğaltaş, güven ve kalitenin adresi olarak, birbirinden güzel projelere imza
+                            atmış bir şirkettir.Sektörün en eski ve köklü firmalarından olan firmamız. Profesyonel çalışan kadromuzla kaliteyi estetikle buluşturarak
+                            mekanlarınıza şıklık katma arzusundadır.
+                            <br />
+                            <br />
+                            Ürün portföyümüzde Çimstone, Granit, Belenco, silenstone, Mermer çeşitleri bulunmaktadır. Bu ürünleri Mutfak tezgahları,
+                            Banyo tezgahları, Zemin döşemeleri, Duvar Kaplamaları ve çeşitli mimarı uygulamalarda kullanmak üzere 1200m kapalı
+                            alan ve son teknoloji üretim makine ve ekipmanlarıyla donatılmış fabrikamızda profesyonel kadromuzla hizmetinizdeyiz.
+                            <br />
+                            <br />
+                            Firmamızın çalışma politikası müşteri memnuniyeti üzerine kuruludur. Hassas ölçülendirme profesyonel montaj ve
+                            zamanında teslimat güvencemiz altındadır.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="row m-t50">
+                    <div class="col-md-12 col-sm-12">
+                        <!-- TITLE START -->
+                        <div class="section-head">
+                            <div class="wt-separator-outer separator-left">
+                                <div class="wt-separator">
+                                    <span class="text-primary text-uppercase sep-line-one ">ZİRVE DOĞALTAŞ</span>
+                                </div>
+                            </div>
+                            <h2>ÜRETİM TESİSİ</h2>
+                        </div>
+                        <!-- TITLE END -->
+       
+                  
+                            <!-- GALLERY CONTENT START -->
+                            <div class="row clearfix">
+                                        
+                                <!-- COLUMNS 1 -->
+
+                                    @*@for (int i = 1; i <= 5; i++)
+                                    {
+                                        string imageURL = String.Format("/images/uretim_tesisi_{0}.jpg", i);
+                                        string imageURLThumb = String.Format("/images/uretim_tesisi_{0}_thumb.jpg", i);
+                                               
+                                        <div class="col-md-4 col-sm-6 m-b30">
+                                            <a data-fancybox="gallery" href="@imageURL">
+                                                <img src="@imageURLThumb">
+                                            </a>
+                                                <div class="work-hover-discription">
+                                                    <h4>Rooms & Halls</h4>
+                                                    <h5>North House</h5>
+                                                </div>
+                                                <a href="#"></a>
+                                        </div>
+                                    }*@
+
+                                @foreach (var item in Model.ProductList.OrderBy(x => x.OrderNo))
+                                {
+                                    <div class="col-md-4 col-sm-6 m-b30">
+                                        <a data-fancybox="gallery" href="@item.ImageFileUrl" class="img-responsive">
+                                            <img style="height:258px; width:360px" src="@item.ImageFileUrl">
+                                        </a>
+                                        <div class="work-hover-discription">
+                                            <h4>@item.Title</h4>
+                                            @*<h5>Bilgi için tıklayınız.</h5>*@
+                                        </div>
+                                        <a href="#"></a>
+                                    </div>
+                                }
+                                        
+                            </div>
+                            <!-- GALLERY CONTENT END -->
+                       
+                    </div>
+                </div>
+
+
+
+                <div class="row m-t50">
+
+                    <div class="col-md-12 col-sm-12">
+                        <!-- TITLE START -->
+                        <div class="section-head">
+                            <div class="wt-separator-outer separator-left">
+                                <div class="wt-separator">
+                                    <span class="text-primary text-uppercase sep-line-one ">ZİRVE DOĞALTAŞ</span>
+                                </div>
+                            </div>
+                            <h2>EBATLAMA İŞLEM</h2>
+                        </div>
+                        <!-- TITLE END -->
+                        <!-- GALLERY CONTENT START -->
+                        <div class="row clearfix">
+                            @foreach (var item in Model.ProductList.Where(x=>x.TypeId==2).OrderBy(x => x.OrderNo))
+                            {
+                                <div class="col-md-4 col-sm-6 m-b30">
+                                    <a data-fancybox="gallery" href="@item.ImageFileUrl" class="img-responsive">
+                                        <img style="height:258px; width:360px; " src="@item.ImageFileUrl">
+                                    </a>
+                                    <div class="work-hover-discription">
+                                        <h4>@item.Title</h4>
+                                        @*<h5>Bilgi için tıklayınız.</h5>*@
+                                    </div>
+                                    <a href="#"></a>
+                                </div>
+                            }
+
+                        </div>
+                        <!-- GALLERY CONTENT END -->
+                        
+                        <!-- VIDEO GALLERY CONTENT START -->
+                        <div class="row clearfix">
+                            <div class="col-md-6 col-sm-12 m-b30">
+                                <iframe src="https://www.youtube.com/embed/-p2XKpXSdJc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="col-md-6 col-sm-12 m-b30">
+                                <iframe src="https://www.youtube.com/embed/6zaceIv1ERk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="col-md-6 col-sm-12 m-b30">
+                                <iframe src="https://www.youtube.com/embed/ylzLOKy8k8E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="col-md-6 col-sm-12 m-b30">
+                                <iframe src="https://www.youtube.com/embed/xMru8AkT-vA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>    
+                        
+                        <div class="row clearfix">
+                            <div class="col-md-6 col-sm-12 m-b30">
+                                <iframe src="https://www.youtube.com/embed/ArsyV5cFxJw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="col-md-6 col-sm-12 m-b30">
+                                <iframe src="https://www.youtube.com/embed/jXFsiYwww38" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="col-md-6 col-sm-12 m-b30">
+                                <iframe src="https://www.youtube.com/embed/ySSo70iZWGE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>                      
+                        <!-- VIDEO GALLERY CONTENT END -->
+                      
+                    </div>
+                </div>
+
+
+             
+
+
+
+                <div class="row m-t50">
+
+                    <div class="col-md-12 col-sm-12">
+                        <!-- TITLE START -->
+                        <div class="section-head">
+                            <div class="wt-separator-outer separator-left">
+                                <div class="wt-separator">
+                                    <span class="text-primary text-uppercase sep-line-one ">ZİRVE DOĞALTAŞ</span>
+                                </div>
+                            </div>
+                            <h2>PAH İŞLEM</h2>
+                        </div>
+                        <!-- TITLE END -->
+                        <!-- GALLERY CONTENT START -->
+                        <div class="row clearfix">
+                            @foreach (var item in Model.ProductList.Where(x => x.TypeId == 3).OrderBy(x => x.OrderNo))
+                            {
+                                <div class="col-md-4 col-sm-6 m-b30">
+                                    <a data-fancybox="gallery" href="@item.ImageFileUrl" class="img-responsive">
+                                        <img style="height:258px; width:360px" src="@item.ImageFileUrl">
+                                    </a>
+                                    <div class="work-hover-discription">
+                                        <h4>@item.Title</h4>
+                                        @*<h5>Bilgi için tıklayınız.</h5>*@
+                                    </div>
+                                    <a href="#"></a>
+                                </div>
+                            }
+
+                        </div>
+                        <!-- GALLERY CONTENT END -->
+                    </div>
+                </div>
+
+
+
+                <div class="row m-t50">
+
+                    <div class="col-md-12 col-sm-12">
+                        <!-- TITLE START -->
+                        <div class="section-head">
+                            <div class="wt-separator-outer separator-left">
+                                <div class="wt-separator">
+                                    <span class="text-primary text-uppercase sep-line-one ">ZİRVE DOĞALTAŞ</span>
+                                </div>
+                            </div>
+                            <h2>DEKORASYON İŞLEM</h2>
+                        </div>
+                        <!-- TITLE END -->
+                        <!-- GALLERY CONTENT START -->
+                        <div class="row clearfix">
+                            @foreach (var item in Model.ProductList.Where(x => x.TypeId == 4).OrderBy(x => x.OrderNo))
+                            {
+                                <div class="col-md-4 col-sm-6 m-b30">
+                                    <a data-fancybox="gallery" href="@item.ImageFileUrl" class="img-responsive">
+                                        <img style="height:258px; width:360px" src="@item.ImageFileUrl">
+                                    </a>
+                                    <div class="work-hover-discription">
+                                        <h4>@item.Title</h4>
+                                        @*<h5>Bilgi için tıklayınız.</h5>*@
+                                    </div>
+                                    <a href="#"></a>
+                                </div>
+                            }
+
+                        </div>
+                        <!-- GALLERY CONTENT END -->
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- WELCOME  SECTION END -->
+
+</div>
+<!-- CONTENT END -->
+
+
+
+
+@section HomeCorporateUp{
+
+<link href="~/fancyBox/jquery.fancybox.min.css" rel="stylesheet" />
+
+<script src="~/fancyBox/jquery-3.3.1.min.js"></script>
+<script src="~/fancyBox/jquery.fancybox.min.js"></script>
+}
+
+@section HomeCorporateDown{
+
+
+     <!-- CUSTOM -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#menuCorporate").addClass('active');
+            });
+        </script>
+    <!-- CUSTOM SON -->
+
+}

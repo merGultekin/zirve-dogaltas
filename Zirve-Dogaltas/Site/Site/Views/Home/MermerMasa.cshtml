@@ -1,0 +1,93 @@
+﻿@model Site.Models.ContentVM
+
+
+@{
+    ViewBag.Title = "Mermer Masa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="page-title" style="background-image: url(/images/gallery/Urunler/mermerMasaBanner.jpg);">
+    <div class="auto-container">
+        <div class="content-box">
+            <h1>Mermer Masa Çeşitleri</h1>
+            <ul class="bread-crumb">
+                <li>@Html.ActionLink("Anasayfa", "Index", "Home")</li>
+                <li>En Uygun Fiyatlı Mermer Masa Çeşitleri</li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+
+<section class="portfolio-section no-padding">
+
+
+    <body class="works-page" style="overflow-y: auto;">
+
+        <section class="works margin-100">
+
+
+            <div class="row clearfix" />
+
+
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text">
+                            <br />
+                            <br />
+                            <h3 style="color:#90144C !important">Hayalinizdeki Dekorasyona ve En Uygun Fiyatlı Mermer Masalara Sahip Olun</h3>
+                            <br />
+                            <p style="color:black !important">
+                                Ev ve ofislerinde farklılık arayan dekorasyon tutkunları için sıradanlıktan kaçış niteliğinde bir mermer masa ve dekorasyon
+                                ürünleri koleksiyonumuz; yaşam alanlarınızın en şık parçaları olmaya aday.
+                                <br />
+                                <br />
+                                Çeşitli uygulamalarımızda sunduğumuz ürünler sizlerin hayal gücü ile sınırlı. En uygun fiyatlı mermer masa ve dekorasyon
+                                ürünlerine sizde sahip olmak istiyorsanız bizimle irtibata geçiniz.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="grid" id="MixItUp830F7B">
+                    <div class="works-items works-popup row">
+
+
+                        @foreach (var item in Model.ProductList.OrderBy(x => x.OrderNo))
+                        {
+                            <div class="work-item mix @item.TypeId diger col-lg-3 col-md-12" style="margin-bottom:40px; display: inline-block;">
+
+                                <div class="details">
+                                    <a data-effect="fadeIn" href="@item.ImageFileUrl" class="img-link">
+                                        <img style="height:258px" src="@item.ImageFileUrl" alt="">
+                                        @*<br />
+                                            <font size="4" style="font-weight:bold;" color="#B92346">@item.Title</font>*@
+                                    </a>
+                                </div>
+
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--support box-->
+        @Html.Partial("_CompanyContactDetails")
+
+
+        <!--start button top-->
+        <div id="scroll-top" style="display: none;">
+            <i class="fa fa-angle-up"></i>
+        </div>
+        <!--end button top-->
+    </body>
+</section>
+
+
+
+
